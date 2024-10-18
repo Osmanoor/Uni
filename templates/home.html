@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Welcome, {{ session['full_name'] }}</h2>
+<a href="{{ url_for('add_request') }}">Add Request</a>
+<ul>
+    {% for request in requests %}
+        <li>{{ request['type'] }} at {{ request['location'] }} ({{ request['location_number'] }})</li>
+    {% endfor %}
+</ul>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Add Request</h2>
+<form method="POST" enctype="multipart/form-data">
+    Location: <input type="radio" name="location" value="Building" required> Building
+              <input type="radio" name="location" value="Room" required> Room<br>
+    Location Number: <input type="number" name="location_number" required><br>
+    Type: <input type="radio" name="type" value="Building" required> Device
+    <input type="radio" name="type" value="Room" required> Printer<br>
+    Description: <textarea name="description"></textarea><br>
+    Image: <input type="file" name="image"><br>
+    <button type="submit">Add Request</button>
+</form>
+{% endblock %}
